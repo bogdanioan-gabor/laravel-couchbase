@@ -23,10 +23,10 @@ class ConnectionTest extends TestCase
     public function testDb()
     {
         $connection = DB::connection('couchbase');
-        $this->assertInstanceOf('CouchbaseBucket', $connection->getCouchbaseBucket());
+        $this->assertInstanceOf('\Couchbase\Bucket', $connection->getCouchbaseBucket());
 
         $connection = DB::connection('couchbase');
-        $this->assertInstanceOf('CouchbaseCluster', $connection->getCouchbaseCluster());
+        $this->assertInstanceOf('\Couchbase\Cluster', $connection->getCouchbaseCluster());
     }
 
     public function testBucketWithTypes()
