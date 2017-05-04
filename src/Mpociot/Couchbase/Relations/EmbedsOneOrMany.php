@@ -267,8 +267,8 @@ abstract class EmbedsOneOrMany extends Relation
     {
         $models = [];
 
-        foreach ($records as $attributes) {
-            $models[] = $this->toModel($attributes);
+        foreach ($records as $key => $attributes) {
+            $models[$key] = $this->toModel($attributes);
         }
 
         if (count($models) > 0) {
